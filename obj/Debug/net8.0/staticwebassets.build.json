@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "dUxzizFQECDo7TgjnmvY+cnneQMg0dchjiAvYyFcFG4=",
+  "Source": "PostgresWebAPI",
+  "BasePath": "_content/PostgresWebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
