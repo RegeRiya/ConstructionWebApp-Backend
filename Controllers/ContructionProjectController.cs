@@ -5,7 +5,7 @@ using PostgresWebAPI.Models;
  namespace PostgresWebAPI.Controllers{
     
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class ConstructionProjectController : ControllerBase 
     {
         ConstructionService _constructionService;
@@ -18,7 +18,7 @@ using PostgresWebAPI.Models;
         [HttpGet]
         public ActionResult Get ()
         {
-            return Ok("p");
+            return Ok("hello world!");
         }
 
         [HttpPost]
