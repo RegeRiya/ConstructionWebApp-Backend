@@ -8,12 +8,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddControllers();
 //Entityframework for Database
 builder.Services.AddEntityFrameworkNpgsql().
 AddDbContext<ApiDbContext>(
     opt => opt.UseNpgsql(builder.Configuration.GetConnectionString("MyWebApiConnection"))
 );
+builder.Services.AddControllers();
 
 //Enable CORS policy
 builder.Services.AddCors(p => p.AddPolicy("disable cors", build => build.WithOrigins("*").AllowAnyMethod().AllowAnyHeader()));

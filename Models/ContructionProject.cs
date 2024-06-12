@@ -4,7 +4,6 @@ namespace PostgresWebAPI.Models{
     
     public class ConstructionProject {
         
-        [Key]
-        public string Name{ get; set; }
+        public string projectName{ get; set; }
     }
 }
