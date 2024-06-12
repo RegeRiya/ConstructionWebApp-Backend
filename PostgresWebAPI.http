@@ -1,4 +1,4 @@
-@PostgresWebAPI_HostAddress = http://localhost:5078
+@PostgresWebAPI_HostAddress = http://localhost:5079
 
 GET {{PostgresWebAPI_HostAddress}}/weatherforecast/
 Accept: application/json

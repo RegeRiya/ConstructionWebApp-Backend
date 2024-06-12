@@ -25,7 +25,7 @@ using PostgresWebAPI.Models;
         public ActionResult Post (ConstructionProject project) 
         {
             this._constructionService.AddProject(project);
-            return Ok();
+            return Ok("posted!");
         }
     }
  
