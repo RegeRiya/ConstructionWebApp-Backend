@@ -1,7 +1,6 @@
 using PostgresWebAPI.Data;
 using PostgresWebAPI.Models;
-using PostgresWebAPI.Data;
-using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace PostgresWebAPI.Services {
     
@@ -33,7 +32,24 @@ namespace PostgresWebAPI.Services {
             }
             // Save changes
             _context.SaveChanges();
+        }
 
+        public void UpdateProject(ConstructionProject project) {
+
+            _context.ConstructionProjects.Where(update => update.projectId == project.projectId)
+            .ExecuteUpdate(
+                setters => setters
+                .SetProperty(p => p.projectName, project.projectName)
+                .SetProperty(p => p.description, project.description)
+                .SetProperty(p => p.startDate, project.startDate)
+                .SetProperty(p => p.endDate, project.endDate)
+            );
+            _context.SaveChanges();
+        }
+
+        public void DeleteProject(int projectId) {
+            _context.ConstructionProjects.Where(update => update.projectId == projectId).ExecuteDelete();
+            _context.SaveChanges();
         }
     }
 } 
