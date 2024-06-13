@@ -1,4 +1,4 @@
-using System.ComponentModel.DataAnnotations;
+// Login Credential Controller
 
 namespace PostgresWebAPI.Models{
     

@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PostgresWebAPI.Data;
 
+// Login Credentials Table
 [Table("LoginCredentials")]
 public class LoginCredentialsEntity
 {

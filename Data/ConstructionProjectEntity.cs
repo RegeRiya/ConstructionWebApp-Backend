@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PostgresWebAPI.Data;
 
+// Construction Project Table 
 [Table("ConstructionProjects")]
 public class ConstructionProjectEntity
 {

@@ -22,12 +22,6 @@ namespace PostgresWebAPI.Services {
         //Post call
         public void AddProject(ConstructionProject project) {
             ConstructionProjectEntity entry = new ConstructionProjectEntity();
-            //if(project.projectName > 0)
-            {
-                //PUT
-                
-            }
-            //else
             {
                 //POST
                 entry.projectId = project.projectId;
@@ -35,10 +29,10 @@ namespace PostgresWebAPI.Services {
                 entry.description = project.description;
                 entry.startDate = project.startDate;
                 entry.endDate = project.endDate;
-                
                 _context.ConstructionProjects.Add(entry);
             }
-                _context.SaveChanges();
+            // Save changes
+            _context.SaveChanges();
 
         }
     }

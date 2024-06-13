@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
-using PostgresWebAPI.Models;
 
+//DbContext to run inital mirgrations and run Postgresql for both logincredentials and construction project tables
 namespace PostgresWebAPI.Data {
     public class ApiDbContext : DbContext {
         public virtual DbSet<ConstructionProjectEntity> ConstructionProjects {get; set;}
