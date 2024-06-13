@@ -1,7 +1,8 @@
-using System.Collections.Generic;
 using PostgresWebAPI.Data;
 using PostgresWebAPI.Models;
 using PostgresWebAPI.Data;
+using System.Linq;
+
 namespace PostgresWebAPI.Services {
     
     public class ConstructionService {
@@ -15,7 +16,8 @@ namespace PostgresWebAPI.Services {
         }
 
         public List<ConstructionProject> GetProjects() {
-            return _projects;
+            return _context.ConstructionProjects.Select(x => new ConstructionProject(x.projectName)).ToList();
+            //return _context.ConstructionProjects.Where(o => true).ToList().Select(x => new ConstructionProject(x.projectName)).ToList();
         }
         
         //Post call

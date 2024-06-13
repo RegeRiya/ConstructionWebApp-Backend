@@ -20,12 +20,12 @@ namespace PostgresWebAPI.Controllers{
         [HttpGet]
         public ActionResult Get ()
         {
-            this._constructionService.GetProjects();
-            return Ok("hello world!");
+            List<ConstructionProject> projectsList = this._constructionService.GetProjects();
+            return Ok(projectsList);
         }
 
         [HttpPost]
-        public ActionResult Post ([FromBody] ConstructionProject project) 
+        public ActionResult Post ([FromBody] ConstructionProject project)
         {
             this._constructionService.AddProject(project);
             return Ok();
