@@ -7,5 +7,10 @@ namespace PostgresWebAPI.Data;
 public class ConstructionProjectEntity
 {
     [Key, Required]
-    public string projectName { get; set; }
+
+    public int projectId { get; set; }
+    public string? projectName { get; set; }
+    public string? description { get; set; }
+    public string? startDate { get; set; }
+    public string? endDate { get; set; }
 }

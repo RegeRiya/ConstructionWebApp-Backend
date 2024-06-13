@@ -16,8 +16,7 @@ namespace PostgresWebAPI.Services {
         }
 
         public List<ConstructionProject> GetProjects() {
-            return _context.ConstructionProjects.Select(x => new ConstructionProject(x.projectName)).ToList();
-            //return _context.ConstructionProjects.Where(o => true).ToList().Select(x => new ConstructionProject(x.projectName)).ToList();
+            return _context.ConstructionProjects.Select(x => new ConstructionProject(x.projectId, x.projectName, x.description, x.startDate, x.endDate)).ToList();
         }
         
         //Post call
@@ -31,7 +30,11 @@ namespace PostgresWebAPI.Services {
             //else
             {
                 //POST
+                entry.projectId = project.projectId;
                 entry.projectName = project.projectName;
+                entry.description = project.description;
+                entry.startDate = project.startDate;
+                entry.endDate = project.endDate;
                 
                 _context.ConstructionProjects.Add(entry);
             }
