@@ -23,7 +23,7 @@ namespace PostgresWebAPI.Services {
             ConstructionProjectEntity entry = new ConstructionProjectEntity();
             {
                 //POST
-                entry.projectId = project.projectId;
+                // entry.projectId = project.projectId;
                 entry.projectName = project.projectName;
                 entry.description = project.description;
                 entry.startDate = project.startDate;

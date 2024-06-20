@@ -7,7 +7,7 @@ namespace PostgresWebAPI.Controllers{
     
     [ApiController]
     [Route("api/[controller]")]
-    public class ConstructionProjectController : ControllerBase 
+    public class ConstructionProjectController : ControllerBase
     {
         private ApiDbContext _context;
         ConstructionService _constructionService;
