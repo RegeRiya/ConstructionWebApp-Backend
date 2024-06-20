@@ -8,7 +8,7 @@ namespace PostgresWebAPI.Data;
 public class ConstructionProjectEntity
 {
     [Key, Required]
-
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int projectId { get; set; }
     public string? projectName { get; set; }
     public string? description { get; set; }
